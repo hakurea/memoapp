@@ -1,0 +1,7 @@
+<% require 'faker' %>
+<% 100.times do |i| %>
+  post_<%= i %>:
+    id : <%= i+1 %>
+    title: <%= Faker::Lorem.paragraph %>
+    content: <%= Faker::Lorem.paragraph 20 %>
+<% end %>

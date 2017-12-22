@@ -1,0 +1,32 @@
+<h1>Hack your Post</h1>
+
+<div class="table-responsive">
+	<table class="table table-fit">
+		<thead>
+			<tr>
+				<th>title</th>
+				<th>created_at</th>				
+			</tr>
+		</thead>
+		<% @posts.each do |post| %>
+			<tbody>
+				<td><%= link_to(post.title, post_path(post)) %></td>
+				<td><%= icon 'time'%> <%= local_time(post.created_at) %></td>
+			</tbody>
+		<% end %>
+	</table>
+	<%= paginate @posts %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+	
+	
